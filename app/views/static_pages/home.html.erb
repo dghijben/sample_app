@@ -1,9 +1,27 @@
-<div class="center hero-unit">
-  <h1>Do you feel like going on an adventure?</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+	<div class="span8">
+	  <h3>Feed</h3>
+	  <%= render 'shared/feed' %>
+	</div>
+  </div>  
+<% else %>
+  <div class="center hero-unit">
+   <h1>Do you feel like going on an adventure? Try my Sample App</h1>
 
-  <h2>
-   Dime a dozen what what!
-  </h2>
+   <h2>
+   Lorem ipsum dime dozen!
+   </h2>
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
+  </div>
+<% end %>
+

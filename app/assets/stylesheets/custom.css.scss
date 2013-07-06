@@ -1,6 +1,11 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+.nav li.dropdown ul.dropdown-menu:before, .nav li.dropdown ul.dropdown-menu:after {
+  display: none;
+}
+
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
